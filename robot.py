@@ -1,22 +1,26 @@
 from weapon import Weapon
 
 class Robot:
-    def __init__(self):
-        self.name = ''
+    def __init__(self, name, power_level, weapon):
+        self.name = name
         self.health = 100
-        self.power_level = 12.5
-        self.weapon = ''
+        self.power_level = power_level
+        self.weapon = weapon
+
+    def set_attributes(self):
+        pass
 
     def set_name(self):
-        self.name = input("Name your robot >")
+        # self.name = input("\nName your robot >")
+        pass
 
     def choose_weapon(self):
-        robot_weapon = Weapon()
-        robot_weapon.pick_weapon()
-        self.weapon = robot_weapon.weapon_type
+        # self.weapon.pick_weapon()
+        pass
 
     def display_robot_attributes(self):
-        print("Robot name: " + self.name)
+        print("\nRobot name: " + self.name)
         print("Current health: " + str(self.health))
         print("Power level: " + str(self.power_level))
-        print("Weapon of choice: " + self.weapon)
+        print("Weapon: " + self.weapon.type + " --> AP: " + str(self.weapon.attack_power))
+        # print("Attack power: " + str(self.weapon_ap))

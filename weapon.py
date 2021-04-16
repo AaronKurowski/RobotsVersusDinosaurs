@@ -1,9 +1,11 @@
 class Weapon:
-    def __init__(self):
-        self.weapon_type = ''
-        self.attack_power = 0
+    def __init__(self, type, attack_power):
+        self.type = type
+        self.attack_power = attack_power
         #self.accuracy = 0
         #self.critical_chance = 0
+
+
 
     def pick_weapon(self):
         self.weapon_type = input("Choose a weapon: sword/mace/axe >")
