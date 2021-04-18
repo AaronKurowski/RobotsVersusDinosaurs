@@ -8,9 +8,9 @@ class Fleet:
         self.create_robots()
 
     def create_robots(self):
-        robot1 = Robot("Jenny")
-        robot2 = Robot("Bipbop")
-        robot3 = Robot("Gooblium")
+        robot1 = Robot("Jenny", Weapon("Sword", 25))
+        robot2 = Robot("Bipbop", Weapon("Mace", 22))
+        robot3 = Robot("Gooblium", Weapon("Dagger", 20))
 
         # append these to fleet
         self.fleet.append(robot1)
