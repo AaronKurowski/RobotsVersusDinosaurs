@@ -9,7 +9,7 @@ class Robot:
         # self.crit_chance = crit_chance
 
     def attack_dino(self, dinosaur):
-        dinosaur.health -= 30
+        dinosaur.health -= 100
 
     def display_robot_attributes(self):
         print("       Name: " + self.name)
