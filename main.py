@@ -11,6 +11,6 @@ if __name__ == '__main__':
     user_start = input("\nStart game? (yes/no) >")
     if user_start == 'yes':
         battlefield.run_game()
-        print(battlefield.dino_herd.herd[0].health)
+
     else:
         print("Exiting 3..2..1..")

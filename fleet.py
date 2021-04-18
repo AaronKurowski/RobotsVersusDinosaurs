@@ -4,7 +4,7 @@ from weapon import Weapon
 class Fleet:
     def __init__(self):
         self.fleet = []
-        self.armory = [Weapon("Mace", 19), Weapon("Axe", 24), Weapon("Sword", 33.4)]
+        # self.armory = [Weapon("Mace", 19), Weapon("Axe", 24), Weapon("Sword", 33.4)]
         self.create_robots()
 
     def create_robots(self):
@@ -18,7 +18,7 @@ class Fleet:
         self.fleet.append(robot3)
 
     def show_bot_team(self):
-        print("\nYour team is: ")
+        print("\nRobot team is: ")
         self.fleet[0].display_robot_attributes()
         self.fleet[1].display_robot_attributes()
         self.fleet[2].display_robot_attributes()

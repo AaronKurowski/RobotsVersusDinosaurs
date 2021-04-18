@@ -14,7 +14,8 @@ class Herd:
         self.herd.append(dino2)
         self.herd.append(dino3)
 
-    def show_dino_herd(self):
+    def show_dino_herd(self, dino_1):
+
         self.herd[0].display_dino_attributes()
         self.herd[1].display_dino_attributes()
         self.herd[2].display_dino_attributes()

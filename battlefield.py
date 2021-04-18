@@ -4,7 +4,6 @@ from herd import Herd
 
 class Battlefield:
     def __init__(self):
-
         self.bot_fleet = Fleet()
         self.dino_herd = Herd()
         self.bot_fleet.create_robots()
@@ -12,8 +11,9 @@ class Battlefield:
 
     def run_game(self):
         self.commence()
+        self.bot_fleet.show_bot_team()
         self.battle()
-        self.display_welcome()
+        self.display_winners()
 
     def battle(self):
         game_bool = True
@@ -21,12 +21,24 @@ class Battlefield:
         self.first_turn = True
         while game_bool:
             while self.first_turn:
-                user_attack = input("Press 1 to attack as robot!")
+                user_attack = input("\nAttack with which robot?"
+                                    "\n1 = Jenny, 2 = Bipbop, 3 = Gooblium"
+                                    "\n >")
                 if user_attack == '1':
                     self.robot_turn(self.bot_fleet.fleet[0])
-                    self.dino_herd.show_dino_herd()
+                    self.dino_herd.herd[0].display_dino_attributes()
                     break
-                if self.dino_herd.herd[0].health == 0:
+                elif user_attack == '2':
+                    self.robot_turn(self.bot_fleet.fleet[1])
+                    self.dino_herd.herd[1].display_dino_attributes()
+                    break
+                elif user_attack == '3':
+                    self.robot_turn(self.bot_fleet.fleet[2])
+                    self.dino_herd.herd[2].display_dino_attributes()
+                    break
+
+                if self.dino_herd.herd[0].health == 0 and self.dino_herd.herd[1].health == 0 and \
+                        self.dino_herd.herd[2].health == 0:
                     game_bool = False
                     break
                 break
@@ -73,7 +85,8 @@ class Battlefield:
         pass
 
     def display_winners(self):
-        pass
+        print("MUHHHHH robots WIN")
+        print("lol kinda only possible outcome rn this app sux Aaron git gud")
 
         # print(self.bot_fleet[0].type + " will attack " + self.dino_herd[0].type)
         # self.dino_herd[0].health -= 10

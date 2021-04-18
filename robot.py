@@ -9,11 +9,11 @@ class Robot:
         # self.crit_chance = crit_chance
 
     def attack_dino(self, dinosaur):
-        dinosaur.health -= 10
+        dinosaur.health -= 30
 
     def display_robot_attributes(self):
-        print("\nRobot name: " + self.name)
-        print("Current health: " + str(self.health))
+        print("       Name: " + self.name)
+        print("     Health: " + str(self.health))
         print("Power level: " + str(self.power_level))
-        print("Weapon: " + self.weapon.type + " --> AP: " + str(self.weapon.attack_power))
+        # print("Weapon: " + self.weapon.type + " --> AP: " + str(self.weapon.attack_power))
         # print("Attack power: " + str(self.weapon_ap))

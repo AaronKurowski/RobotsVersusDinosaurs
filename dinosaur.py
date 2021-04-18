@@ -12,6 +12,7 @@ class Dinosaur:
         robot.health -= 10
 
     def display_dino_attributes(self):
+
         print("\nDino type: " + self.type)
         print("Current health: " + str(self.health))
         print("Energy level: " + str(self.energy))
