@@ -5,11 +5,12 @@ class Fleet:
     def __init__(self):
         self.fleet = []
         self.armory = [Weapon("Mace", 19), Weapon("Axe", 24), Weapon("Sword", 33.4)]
+        self.create_robots()
 
     def create_robots(self):
-        robot1 = Robot("Jenny", 100, self.armory[0])
-        robot2 = Robot("Bipbop", 100, self.armory[1])
-        robot3 = Robot("Gooblium", 100, self.armory[2])
+        robot1 = Robot("Jenny")
+        robot2 = Robot("Bipbop")
+        robot3 = Robot("Gooblium")
 
         # append these to fleet
         self.fleet.append(robot1)

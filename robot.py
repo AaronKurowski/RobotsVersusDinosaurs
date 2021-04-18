@@ -1,22 +1,15 @@
 from weapon import Weapon
 
 class Robot:
-    def __init__(self, name, power_level, weapon):
+    def __init__(self, name):
         self.name = name
         self.health = 100
-        self.power_level = power_level
-        self.weapon = weapon
+        self.power_level = 100
+        # self.weapon = Weapon()
+        # self.crit_chance = crit_chance
 
-    def set_attributes(self):
-        pass
-
-    def set_name(self):
-        # self.name = input("\nName your robot >")
-        pass
-
-    def choose_weapon(self):
-        # self.weapon.pick_weapon()
-        pass
+    def attack_dino(self, dinosaur):
+        dinosaur.health -= 10
 
     def display_robot_attributes(self):
         print("\nRobot name: " + self.name)
