@@ -1,5 +1,3 @@
-import random
-
 class Dinosaur:
     def __init__(self, type, attack_power):
         self.type = type
@@ -9,7 +7,7 @@ class Dinosaur:
         #self.crushing_blow_chance = 0
 
     def attack_robot(self, robot):
-        robot.health -= 10
+        robot.health -= self.attack_power
 
     def display_dino_attributes(self):
 

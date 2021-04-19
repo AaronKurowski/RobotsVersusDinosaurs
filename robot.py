@@ -12,7 +12,7 @@ class Robot:
         dinosaur.health -= self.weapon.attack_power
 
     def display_robot_attributes(self):
-        print("       Name: " + self.name)
+        print("\n       Name: " + self.name)
         print("     Health: " + str(self.health))
         print("Power level: " + str(self.power_level))
         print("Weapon: " + self.weapon.type + " --> AP: " + str(self.weapon.attack_power))
