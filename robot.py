@@ -10,6 +10,7 @@ class Robot:
 
     def attack_dino(self, dinosaur):
         dinosaur.health -= self.weapon.attack_power
+        # dinosaur.health -= 100
 
     def display_robot_attributes(self):
         print("\n       Name: " + self.name)

@@ -9,7 +9,7 @@ if __name__ == '__main__':
     battlefield = Battlefield()
     battlefield.display_welcome()
     user_start = input("\nStart game? (yes/no) >")
-    if user_start == 'yes':
+    if user_start.lower() == 'yes':
         battlefield.run_game()
 
     else:
